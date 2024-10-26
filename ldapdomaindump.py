@@ -508,9 +508,10 @@ def main():
     parser.add_argument('--pass-pol', action='store_true', help='Get domain policy information')
     parser.add_argument('--computers', action='store_true', help='Get domain computer information')
     parser.add_argument('--users', action='store_true', help='Get domain user information')
+    parser.add_argument('--groups', action='store_true', help='Get domain group information')
     parser.add_argument('--dump', action='store_true', help='Dump all information into respective JSON files')
     parser.add_argument('--html', action='store_true', help='Convert JSON reports to HTML')
-    parser.add_argument('--groups', action='store_true', help='Get domain group information')
+    
 
     args = parser.parse_args()
 
