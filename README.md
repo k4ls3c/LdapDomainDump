@@ -35,3 +35,5 @@ Options
   --dump                Dump all information into respective JSON files
   --html                Convert JSON reports to HTML
 ```
+## Reference
+- [https://github.com/dirkjanm/ldapdomaindump](https://github.com/dirkjanm/ldapdomaindump)
