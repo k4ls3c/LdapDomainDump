@@ -499,7 +499,7 @@ class reportWriter():
 
 def main():
     print(banner)
-    parser = argparse.ArgumentParser(description='LDAP User Enumerator')
+    parser = argparse.ArgumentParser(description='LDAP Domain Dumper')
     parser.add_argument('-d', '--domain', help='Domain name', required=True)
     parser.add_argument('-u', '--username', help='Username for authentication', required=True)
     parser.add_argument('-p', '--password', help='Password for authentication', required=True)
