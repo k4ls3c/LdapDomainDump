@@ -52,7 +52,7 @@ class LDAPAuthenticator:
         self.connection = None
         self.base_dn = ','.join(['DC=' + dc for dc in domain.split('.')])
 
-    def create_server(self) -> ldap3.Server:
+    def initialize_server_connection(self) -> ldap3.Server:
         tls = ldap3.Tls(
             validate=ssl.CERT_NONE,
             version=ssl.PROTOCOL_TLSv1_2,
@@ -72,7 +72,7 @@ class LDAPAuthenticator:
 
     def authenticate(self) -> Optional[ldap3.Connection]:
         try:
-            self.server = self.create_server()
+            self.server = self.initialize_server_connection()
             
             if not hasattr(ldap3, 'TLS_CHANNEL_BINDING'):
                 raise Exception(
